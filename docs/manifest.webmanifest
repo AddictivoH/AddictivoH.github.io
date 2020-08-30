@@ -1,11 +1,11 @@
 {
-  "name": "MSL-Data-Nest",
-  "short_name": "MSL-Data-Nest",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Monster Super League Data Nest",
+  "short_name": "MSL Data Nest",
+  "theme_color": "#303030",
+  "background_color": "#d9ac7b",
   "display": "standalone",
-  "scope": "./",
-  "start_url": "./",
+  "scope": "/MSL-Data-Nest/",
+  "start_url": "https://addictivoh.github.io/MSL-Data-Nest/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
