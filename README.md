@@ -1,3 +1,6 @@
+IMPORTANT Clear coockies and cache to use this new version.
+https://addictivoh.github.io/
+
 # Monster Super League Data Nest
 
 This project was generated with Angular CLI version 10.0.8.
