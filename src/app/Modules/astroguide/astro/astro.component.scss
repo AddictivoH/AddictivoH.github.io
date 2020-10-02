@@ -1,0 +1,107 @@
+.astro-detail {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    'header header  header'
+    'aside  contenido contenido'
+    'aside  contenido contenido';
+}
+.astro-detail header{
+  grid-area: header;
+}
+.astro-detail aside {
+  grid-area: aside;
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4);;
+  grid-auto-rows: min-content;
+  grid-template-areas:
+    'icons'
+    'ls'
+    'ns'
+    'as';
+}
+.astro-detail .contenido {
+  grid-area: contenido;
+}
+
+.astro-detail header .cabeza{
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    'title'
+    'stats'
+    'tier';
+}
+.astro-detail header .card-title{
+  grid-area: title;
+}
+.astro-detail header .card-stats{
+    grid-area: stats;
+}
+.astro-detail header .card-tier{
+    grid-area: tier;
+}
+
+aside .card-ls{
+  grid-area: ls;
+}
+aside .card-ns{
+  grid-area: ns;
+}
+aside .card-as{
+  grid-area: as;
+}
+aside .card-icons{
+  grid-area: icons;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  //position: relative;
+}
+.card-tier {
+  grid-area: tier;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background: var(--msl-l2);
+}
+  
+.card-tier .tier , .skill{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  
+.card-tier .value {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  
+.card-tier .type {
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  
+  @media (max-width:767px) {
+    .astro-detail {
+      grid-template-areas:
+        'header header  header'
+        'aside  aside   aside'
+        'contenido  contenido   contenido';
+    }
+  }
+
+  /*.mslcard{
+    height: min-content;
+  }*/

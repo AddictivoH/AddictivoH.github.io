@@ -1,0 +1,231 @@
+
+    <div class="row">
+    <!--Calculator-->
+    <div class="card col-sm-12 col-md-4">
+      <div class="card-header">
+        Gem Calculator
+      </div>
+      <div class="card-body">
+  
+        <div class="col mb-1 input-group">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="gemqualitySet">Set</label>
+          </div>
+          <select onchange="calculateGem()" id="gemqualitySet" class="custom-select">
+            <option disabled selected> Select </option>
+            <option value="HP">Life (HP +20%)</option>
+            <option value="ATK">Valor (ATK +20%)</option>
+            <option value="DEF">Protection (DEF +20%)</option>
+            <option value="CD">Ruin (CD +40%)</option>
+            <option value="CR">Intuition (CR +20%)</option>
+            <option value="REC">Vitality (REC +25%)</option>
+            <option value="STUN">Stun</option>
+            <option value="HPSIPHON">HP vamp</option>
+            <option value="SPSIPHON">SP vamp</option>
+          </select>
+        </div>
+  
+        <div class="col mb-1 input-group">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="gemqualitySet">Form</label>
+          </div>
+          <select onchange="calculateGem()" id="gemqualityForm" class="custom-select">
+            <option value="Square">Square</option>
+            <option value="Diamond">Diamond</option>
+            <option value="Triangle">Triangle</option>
+          </select>
+        </div>
+  
+        <div class="col mb-1 input-group">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="gemqualitySet">Nat</label>
+          </div>
+          <select onchange="calculateGem()" id="gemqualityStar" class="custom-select" required>
+            <option value=2>4*</option>
+            <option value=1>5*</option>
+            <option selected value=0>6*</option>
+          </select>
+        </div>
+  
+        <div class="col mb-1 input-group">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="gemqualitySet">Upgrade</label>
+          </div>
+          <select onchange="calculateGem()" id="gemqualityPlus" class="custom-select" required>
+            <option disabled selected> Select </option>
+            <option value=0> +0</option>
+            <option value=3> +3</option>
+            <option value=6> +6</option>
+            <option value=9> +9</option>
+            <option value=12> +12</option>
+            <option value=15> +15</option>
+          </select>
+        </div>
+  
+        <div class="col mb-1 input-group">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="gemqualitySet">Main Stat</label>
+          </div>
+          <select onchange="calculateGem()" id="gemqualityStat0" class="custom-select">
+            <option disabled selected> Select </option>
+            <option value="HPp"> HP %</option>
+            <option value="HPf"> HP flat</option>
+            <option value="ATKp"> ATK %</option>
+            <option value="ATKf"> ATK flat</option>
+            <option value="DEFp"> DEF %</option>
+            <option value="DEFf"> DEF flat</option>
+            <option value="CD"> CD %</option>
+            <option value="CR"> CR %</option>
+            <option value="RECp"> REC %</option>
+            <option value="RECf"> REC flat</option>
+            <option value="RESTp"> REST %</option>
+          </select>
+        </div>
+  
+        <div class="col mb-1 input-group">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="gemqualitySet">Sub Stat 1</label>
+          </div>
+          <select onchange="calculateGem()" id="gemqualityStat1" class="custom-select">
+            <option disabled selected> Select </option>
+            <option value="HPp"> HP %</option>
+            <option value="HPf"> HP flat</option>
+            <option value="ATKp"> ATK %</option>
+            <option value="ATKf"> ATK flat</option>
+            <option value="DEFp"> DEF %</option>
+            <option value="DEFf"> DEF flat</option>
+            <option value="CD"> CD %</option>
+            <option value="CR"> CR %</option>
+            <option value="RECp"> REC %</option>
+            <option value="RECf"> REC flat</option>
+            <option value="RESTp"> REST %</option>
+          </select>
+        </div>
+  
+        <div class="col mb-1 input-group">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="gemqualitySet">Sub Stat 2</label>
+          </div>
+          <select onchange="calculateGem()" id="gemqualityStat2" class="custom-select">
+            <option disabled selected> Select </option>
+            <option value="HPp"> HP %</option>
+            <option value="HPf"> HP flat</option>
+            <option value="ATKp"> ATK %</option>
+            <option value="ATKf"> ATK flat</option>
+            <option value="DEFp"> DEF %</option>
+            <option value="DEFf"> DEF flat</option>
+            <option value="CD"> CD %</option>
+            <option value="CR"> CR %</option>
+            <option value="RECp"> REC %</option>
+            <option value="RECf"> REC flat</option>
+            <option value="RESTp"> REST %</option>
+          </select>
+        </div>
+  
+        <div class="col mb-1 input-group">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="gemqualitySet">Sub Stat 3</label>
+          </div>
+          <select onchange="calculateGem()" id="gemqualityStat3" class="custom-select">
+            <option disabled selected> Select </option>
+            <option value="HPp"> HP %</option>
+            <option value="HPf"> HP flat</option>
+            <option value="ATKp"> ATK %</option>
+            <option value="ATKf"> ATK flat</option>
+            <option value="DEFp"> DEF %</option>
+            <option value="DEFf"> DEF flat</option>
+            <option value="CD"> CD %</option>
+            <option value="CR"> CR %</option>
+            <option value="RECp"> REC %</option>
+            <option value="RECf"> REC flat</option>
+            <option value="RESTp"> REST %</option>
+          </select>
+        </div>
+  
+        <div class="col mb-1 input-group">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="gemqualitySet">Sub Stat 4</label>
+          </div>
+          <select onchange="calculateGem()" id="gemqualityStat4" class="custom-select">
+            <option disabled selected> Select </option>
+            <option value="HPp"> HP %</option>
+            <option value="HPf"> HP flat</option>
+            <option value="ATKp"> ATK %</option>
+            <option value="ATKf"> ATK flat</option>
+            <option value="DEFp"> DEF %</option>
+            <option value="DEFf"> DEF flat</option>
+            <option value="CD"> CD %</option>
+            <option value="CR"> CR %</option>
+            <option value="RECp"> REC %</option>
+            <option value="RECf"> REC flat</option>
+            <option value="RESTp"> REST %</option>
+          </select>
+        </div>
+  
+        <div class="col mb-1 input-group">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="gemqualitySet">Startin Subs</label>
+          </div>
+          <select onchange="calculateGem()" id="gemqualityProcs0" class="custom-select">
+            <option value=0 selected> 0 </option>
+            <option value=1> 1</option>
+            <option value=2> 2</option>
+            <option value=3> 3</option>
+            <option value=4> 4</option>
+          </select>
+        </div>      
+  
+        <div class="card-body">
+  
+          <p>Star</p>
+          <div><img src="assets/img/misc/Nat_6.png" class="align-self-center"></div>
+  
+          <p>Form</p>
+          <div><img src="assets/img/gem/Form.png" class="align-self-center"></div>
+  
+        </div>
+      </div>
+    </div>
+    <!--mini cards-->
+    <div class="card col-sm-12 col-md-8">
+      <div class="card-header">
+        Quality For
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="card bg-dark text-white hover mt-2 col-sm-12 col-md-6">
+            <div class="card-header">
+              Attacker
+            </div>
+            <div class="card-body bg-secondary">
+              <p id="qualityA">Result</p>
+            </div>
+          </div>
+          <div class="card bg-dark text-white hover mt-2 col-sm-12 col-md-6">
+            <div class="card-header bg-secondary">
+              Healer
+            </div>
+            <div class="card-body bg-secondary">
+              <p id="qualityH">Result</p>
+            </div>
+          </div>
+          <div class="card bg-dark text-white hover mt-2 col-sm-12 col-md-6">
+            <div class="card-header">
+              HP Aggr
+            </div>
+            <div class="card-body bg-secondary">
+              <p id="qualityAH">Result</p>
+            </div>
+          </div>
+          <div class="card bg-dark text-white hover mt-2 col-sm-12 col-md-6">
+            <div class="card-header">
+              DEF Aggr
+            </div>
+            <div class="card-body bg-secondary">
+              <p id="qualityAD">Result</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>

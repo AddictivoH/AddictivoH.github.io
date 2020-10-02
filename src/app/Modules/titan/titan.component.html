@@ -1,0 +1,101 @@
+<article>
+
+    <mat-tab-group mat-align-tabs="center">
+
+        <mat-tab label="General">
+            <h2>Así funciona</h2>
+            <p>Para luchar contra un Titán, necesitas 16 astros, que se dividen así: La pelea de Titán se divide en 2
+                rondas, la primera línea de 8 astros y una segunda línea de 8 astros. </p>
+            <img src="assets/img/titan/001.png" class="img-fluid rounded m-1">
+            <p> Al principio, el Titán atacará al equipo 1 y luego al equipo 2 de cada linea.
+                Después de eso, a la línea completa de 8 astros es atacada cada vez que ataque. Si el Titán supera tu
+                primera línea, la lucha se reinicia. Esto es importante, porque el Titán obtiene un beneficio
+                (buff) de "Ira" despues de que tus equipos ataquen, que multiplica el ataque actual del Titán.
+                Después de derrotar a la primera línea, el ataque volverá a la normalidad. Sin embargo, las desventajas
+                que aplicó en el Titán permanecerán, solo 1 turno de ellas desaparecerá. Después de eso,
+                llega la segunda línea y es básicamente la misma pelea que para la primera línea.
+                <br>Una diferencia importante entre la primera y la segunda línea son los
+                diferentes ataques que usa el Titán. El ataque pasivo, donde el Titán solo ataca a un equipo (4
+                astros) tiene la misma desventaja en la primera y segunda línea. La diferencia es que usa un ataque
+                de "desdoblamiento" en la primera línea, mientras que usa un ataque similar a un "terremoto" en la
+                segunda línea, que causa un poco más de daño, pero no aplica un perjuicio (Debuff). Por ejemplo, el
+                Titán de agua usa una desventaja de ataque hacia abajo en la primera línea con sus ataques de área,
+                mientras que solo daña la segunda línea y ya no usa una desventaja. Esta diferencia es la razón por
+                la que comienzas construyendo tu segunda línea, antes de trabajar en la primera línea. </p>
+            <h2>Alineación general:</h2>
+            <li> Construir la segunda línea antes que la primera. </li>
+            <li> Dividir tus líneas en un lado de debuffer y otra de atacantes es lo mejor,
+                especialmente al principio. Puedes poner debuffers en el lado derecho. </li>
+            <li> Tener al menos un sanador de habilidad activa (5*) en cada equipo, dos
+                sanadores en el equipo atacante (derecha) en general resultarán en más daño. </li>
+            <li> Subir a nivel 60 primero a los atacantes &gt; curadores &gt; debuffers. </li>
+            <li>Tener al menos todas las gemas euipadas a +12.</li>
+            <li> Tener 1 o 2 astros que apliquen un "Debuff" de "ataque menos" y 1 o 2 con
+                "defensa menos" por línea. La habilidad "Debilitar" en combinación con la reducción de atk y def es
+                una muy buena adición y lo cual aumentará tu daño. </li>
+            <li> Necesitas al menos 2 atacantes que tenga un ataque valiente (CS).<br> Otras habilidades que funcionarán
+                como una sustitución temporal: "Ataque
+                inquebrantable" (US), "debuffs", "cazador" y "depredador" son tu elección si no tienes CS
+                (Courageous Strike) y US (Unflinching Strike). </li>
+            <li> La habilidad de lider también es una fuente de daño adicional o de ser más
+                tanque.<br> En general, el líder no tiene la máxima prioridad porque solo
+                tiene en cuenta las estadísticas básicas, pero puede marcar una diferencia notable. Especialmente
+                los lider Nat5 son a menudo más fuertes.<br> Los mejores son Hp%, Atk% y Daño
+                crit%. Si no tiene estos disponibles, también hay habilidades como Tasa crit%, Def% y Recovery% se
+                pueden usar. Una habilidad de líder no es imprescindible, pero con astros más fuertes puede provocar
+                más daño. Tener cuidado al momento de escoger un lider ya que no todos se aplican en la batalla.
+            </li><img src="assets/img/titan/002.png" class="img-fluid rounded m-1">
+            <p> Así es como debería verse una alineación en general. A medida que juegues más,
+                habrá algunas más opciones como atacante con debuffs, que se pueden colocar como debuffers, mientras
+                que también hacen daño. </p><img src="assets/img/titan/003.png" class="img-fluid rounded m-1">
+            <h2>Armando tus astros</h2>
+            <p> Tu primer objetivo será tener 8 astros de nivel 50 para cada elemento
+                enfocandote priemero en el titan de fuego &gt; madera &gt; agua. </p>
+            <p> Comienza ascendiendo a tus astros priorizando a los atacantes &gt; sanadores
+                &gt; debuffers. </p>
+            <h3>Gemas</h3>
+            <p> Solo usar gemas de 5 o 6 estrellas y por lo menos a +12.<br> Los bonus de conjunto (sets) no son tan
+                importantes
+                como los subestadisticas (substats). Es bueno tener conjuntos, pero si las subestadisticas no son lo
+                suficientemente buenas,
+                un conjunto roto (Broken set) es ser mejor. </p>
+            <h4>Atacante</h4>
+            <p><b>ATK-ATK-HP</b> | <b>ATK-TC-HP</b> | <b>ATK ATK TC</b> | <b>ATK-ATK-DC</b></p>
+            <p>Subs: TC, DC, DEF, HP, RES</p>
+            <h4>Debuffer</h4>
+            <p><b>HP-HP-DEF</b> | <b>HP-DEF-DEF</b></p>
+            <p>Subs: DEF, RES, HP</p>
+            <h4>Curador</h4>
+            <p><b>HP-DEF-REC</b> | <b>HP-HP-DEF</b></p>
+            <p>Subs: RES, REC, DEF, HP</p>
+        </mat-tab>
+
+        <mat-tab label="Fuego">
+
+            <app-fuego></app-fuego>
+
+        </mat-tab>
+        <mat-tab label="Agua">
+
+            <app-agua></app-agua>
+
+        </mat-tab>
+        <mat-tab label="Leña">
+
+            <app-madera></app-madera>
+
+        </mat-tab>
+        <mat-tab label="Luz">
+
+            <app-luz></app-luz>
+
+        </mat-tab>
+        <mat-tab label="Tenebroso">
+
+            <app-tenebroso></app-tenebroso>
+
+        </mat-tab>
+
+    </mat-tab-group>
+
+</article>

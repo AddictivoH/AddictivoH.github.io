@@ -12,6 +12,10 @@
           "/manifest.webmanifest",
           "/*.css",
           "/*.js"
+        ],
+        "urls": [
+          "https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp",
+          "https://fonts.googleapis.com/icon?family=Material+Icons"
         ]
       }
     },
@@ -24,6 +28,18 @@
           "/assets/**",
           "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
         ]
+      }
+    }
+  ],
+  "dataGroups":[
+    {
+      "name":"api",
+      "urls": [],
+      "cacheConfig": {
+        "maxSize": 5,
+        "maxAge": "6000h",
+        "timeout": "10s",
+        "strategy": "freshness"
       }
     }
   ]

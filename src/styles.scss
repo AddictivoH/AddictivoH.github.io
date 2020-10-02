@@ -34,6 +34,298 @@ $MSL-Data-Nest-theme: mat-light-theme((
 @include angular-material-theme($MSL-Data-Nest-theme);
 
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --msl-d0:#261612;
+  --msl-d1:#34201b;
+  --msl-d2:#3a2923;
+  --msl-d3:#663a2c;
+  --msl-d4:#a77648;// background
+  --msl-d5:#c4996d;//#d9ac7b
+  --msl-d6:#d0a781;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  --msl-l1:#f5f0eb;//text2
+  --msl-l2:#ead8c2;//bg-dialog
+  --msl-l3:#d9b88e;//text
+  --msl-l4:#efc492;//
+  --msl-l5:#d9b88e;//
+  --msl-l6:#f1c592;//
+  --msl-l7:#d9ac7b;// bg-article
+
+  --msl-c1:#fed328;//text accent
+  --msl-c2:#0c827e;//btn
+
+  --clr-light: var(--msl-l1);
+  --clr-dark: var(--msl-d0);
+
+  --background: var(--msl-d4);
+  --foreground: var(--clr-light);//general text
+
+  --bg-nav       : #1A252D;
+  --bg           : #FBFBFE;
+  --blue         : #59B3F3;
+  --grey         : #A0A7AC;
+  --white        : #FFFFFF;
+}
+:host {
+  font-family: Roboto, "Helvetica Neue",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+.darkmode {
+  --msl00: #000000;/* bg */
+  --msl01: #121212;/* pri */
+  --msl02: #212121;/* sec */
+  --msl03: #303030;/* ter */
+  --msl04: #424242;/* cuar */
+
+  --clr-light: #fdffc4;
+  --clr-dark: #fdffc4;
+
+  --background: var(--msl00);
+  --foreground: var(--clr-light);
+}
+
+.dark-mode-toggle {
+  background: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  color: var(--foreground);
+}
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+  //color: var(--foreground);
+}
+
+body {
+  height: 100vh;
+  align-items: center;
+  justify-items: center;
+  background-color: var(--background);
+  color: var(--foreground);
+  text-align: left;
+}
+
+main {  
+  display: flex;
+  background-color: var(--background);
+  color: var(--foreground);
+  padding: 4rem 1.5rem 0rem 1.5rem;
+  //max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} 
+
+article {
+  max-width: 100vw;
+  margin: 0;
+  padding: 0.75rem;
+}
+
+//mysh
+.sticky {
+  position: sticky;
+  position:-webkit-sticky;
+  top: 0;
+  z-index:1020;
+}
+.sticky-top-2 {
+  padding-top: 60;
+  position:-webkit-sticky;
+  position:sticky;
+  z-index:1010;
+}
+
+.hp{background:#bf545a;color:#323232;}
+.atk{background:#4b87ac;color:#323232;}
+.def{background:#e88943;color:#323232;}
+.rec{background:#789b59;color:#323232;}
+.cd{background:#b0b0b0;color:#323232;}
+.cr{background:#8a58a9;color:#323232;}
+.res{background:#fbc500;color:#323232;}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.mslcard{
+  background:var(--msl-d2);
+  color:var(--foreground);
+  border-style:inset;
+  border-color:var(--msl-l3);
+  border-width: thin;
+  /*box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.24);*/
+  border-radius: 0.75rem;
+  margin: 0.5rem 0.5rem;
+  min-height:1em;  
+  //overflow:hidden;
+  transform:translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+  
+.mslcard,.mslcard-focus{
+  border-radius:.5rem;
+  margin:.5rem;
+  padding:.25rem;
+}
+  
+.mslcard-focus{
+  background:var(--msl-l2);//or msl04
+  color:var(--clr-dark);
+  margin: 4px 4px;
+  border-radius: 8px;
+}
+
+// angular styles
+h1,  h2,  h3,  h4,  h5,  h6 {
+    margin: 0.5rem 0rem;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  svg.material-icons {
+    height: 24px;
+    width: auto;
+  }
+
+  svg.material-icons:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  .card svg.material-icons path {
+    fill: #888;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0.5rem;
+  }
+
+  .card {
+    border-radius: 0.25rem;
+    border: 1px solid var(--msl-l4);
+    background-color: var(--msl-c2);
+    min-height: 0.25rem;//height: 40px;
+    min-width: 3rem;//width: 200px;
+    margin: 0rem 0.5rem 1rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease-in-out;
+    //line-height: 1.75rem;
+  }
+
+  .card-container .card:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .card.card-small {
+    height: 16px;
+    width: 168px;
+  }
+
+  .card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  .card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: var(--msl-c1);
+  }
+
+  a,  a:visited,  a:hover {
+    color:var(--msl-c1);// #1976d2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--msl-l1);
+  }
+
+  .mat-tab-label-content{
+    color:var(--msl-c1);
+  }
+  .mat-tab-header-pagination-chevron{
+    border-color: var(--foreground);
+  }
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+    :host {
+      font-size: 12px;
+    }
+
+    main{
+      margin: 0rem 0rem 4rem 0rem;
+      padding: 0;
+    }
+
+    .card-container > *:not(.circle-link) {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 1rem;
+      margin: 0.5rem 0rem;
+    }
+  }
+
+
+  /* Bootstrap*/
+  .badge{
+    display:inline-block;
+    padding:.25em .4em;
+    font-size:75%;
+    font-weight:700;
+    line-height:1;
+    text-align:center;
+    white-space:nowrap;
+    vertical-align:baseline;
+    border-radius:.25rem;
+    transition:color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out
+  }
+    @media (prefers-reduced-motion:reduce){
+      .badge{transition:none}
+    }
+
+    a.badge:focus,a.badge:hover{text-decoration:none}
+    .badge:empty{display:none}
+    .btn .badge{position:relative;top:-1px}
+    .badge-pill{padding-right:.6em;padding-left:.6em;border-radius:10rem}
+    .d-inline{display:inline!important}
+    .d-inline-block{display:inline-block!important}
+    .d-block{display:block!important}
+    .d-table{display:table!important}
+    .d-table-row{display:table-row!important}
+    .d-table-cell{display:table-cell!important}
+    .d-flex{display:flex!important}
+    .d-inline-flex{display:inline-flex!important}
+    .rounded{border-radius:.25rem!important}
