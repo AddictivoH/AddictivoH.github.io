@@ -1,8 +1,8 @@
 {
   "name": "MSL-Data-Nest",
   "short_name": "MSL-Data-Nest",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "theme_color": "#a77648",
+  "background_color": "#a77648",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
