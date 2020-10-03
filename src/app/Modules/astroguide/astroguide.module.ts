@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatIconModule} from '@angular/material/icon';
@@ -21,6 +22,8 @@ import { DmgComponent } from './astro/dmg/dmg.component';
   declarations: [AstroguideComponent, AstroComponent, DmgComponent],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
     MatTabsModule,
     MatIconModule,
     MatFormFieldModule,

@@ -1,0 +1,28 @@
+.mat-table {
+  display: block;
+  background: var(--msl-l1);
+  color: var(--msl-d0);
+  width: auto;
+}
+
+/*.mat-row,  .mat-header-row {
+  // display: flex;
+  //flex: 1;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 24px;
+  color: var(--msl-d0);
+}
+
+.mat-cell,  .mat-header-cell {
+  flex: 1;
+  overflow: hidden;
+  word-wrap: break-word;
+  color: var(--msl-d0);
+}*/
+
+th.mat-sort-header-sorted {
+    color: black;
+}
