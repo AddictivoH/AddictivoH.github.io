@@ -160,6 +160,7 @@ article {
 }
 
 .mslcard{
+  //display: block;
   background:var(--msl-d2);
   color:var(--foreground);
   border-style:inset;
@@ -181,7 +182,7 @@ article {
 }
   
 .mslcard-focus{
-  background:var(--msl-l2);//or msl04
+  background:var(--msl-l1);//or msl04
   color:var(--clr-dark);
   margin: 4px 4px;
   border-radius: 8px;
@@ -275,7 +276,7 @@ h1,  h2,  h3,  h4,  h5,  h6 {
   }
 
   /* Responsive Styles */
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 906px) {
     :host {
       font-size: 12px;
     }
@@ -299,7 +300,8 @@ h1,  h2,  h3,  h4,  h5,  h6 {
   /* Bootstrap*/
   .badge{
     display:inline-block;
-    padding:.25em .4em;
+    padding:.5em;
+    margin-right: 0.25rem;
     font-size:75%;
     font-weight:700;
     line-height:1;

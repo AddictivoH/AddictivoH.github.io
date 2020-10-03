@@ -71,7 +71,7 @@ aside .card-icons{
   grid-template-rows: 1fr;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  background: var(--msl-l2);
+  background: var(--msl-l1);
 }
   
 .card-tier .tier , .skill{
@@ -93,7 +93,7 @@ aside .card-icons{
     text-transform: uppercase;
   }
   
-  @media (max-width:767px) {
+  @media (max-width:906px) {
     .astro-detail {
       grid-template-areas:
         'header header  header'

@@ -1,0 +1,96 @@
+.mat-table {
+    display: block;
+    background: var(--msl-l1);
+    color: var(--msl-d0);
+    width: auto;
+  }
+  
+.mat-row,  .mat-header-row {
+    display: flex;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    align-items: center;
+    min-height: 36px;
+    padding: 0 24px;
+    color: var(--msl-d0);
+  }
+  
+.mat-cell,  .mat-header-cell {
+    flex: 1;
+    overflow: hidden;
+    word-wrap: break-word;
+    color: var(--msl-d0);
+  }
+
+.mat-header-cell {
+    color: var(--msl-d0);
+    font-size: 16px;    
+    font-weight: bold;
+}
+
+
+/* Reset Select */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: var(--bg); //bg 
+    background-image: none;
+    flex: 1;
+    padding: 0 .5rem;
+    color: var(--grey);
+    cursor: pointer;
+  }
+  /* Remove IE arrow */
+select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select */
+.custom-select {
+    position: relative;
+    display: flex;
+    min-width: 12em;
+    max-width: 20em;
+    height: 2em;
+    line-height: 2;
+    background: var(--bg-nav); //bg label
+    overflow: hidden;
+    border-radius: 0.5rem;
+    margin: 0.25rem;
+    padding: 0 1rem 0 0.5rem;
+  }
+label {
+    margin-right: 0.5rem;
+}
+  /* Arrow */
+.custom-select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1rem;
+    background: var(--bg-nav); //bg arrow
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+  }
+  /* Transition */
+.custom-select:hover::after {
+    color: var(--msl-c1);
+  }
+
+section{
+    display: inline-flex;
+}
+
+@media screen and (max-width: 1024px) {
+    section{
+        display: inline-block;
+    }
+}

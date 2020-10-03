@@ -1,11 +1,9 @@
 <!--Calculator-->
-<div class="card-header">Stats Calculator</div>
-<div class="card-body">
-    <div class="col mb-1 input-group hover">
-        <div class="input-group-prepend">
-            <label class="input-group-text" for="gem1">Gem 1</label>
-        </div>
-        <select onchange="calculateStats()" id="gem1" class="custom-select">
+<h2>Stats Calculator</h2>
+<section>
+    <div class="custom-select">
+        <label for="gem1">Gem 1</label>
+        <select name="gem1" id="gem1" onchange="calculateStats()">
             <option selected>None/Choose...</option>
             <option value="HP">HP +68%</option>
             <option value="ATK">ATK +68%</option>
@@ -15,11 +13,9 @@
             <option value="REC">REC +68%</option>
         </select>
     </div>
-    <div class="col mb-1 input-group hover">
-        <div class="input-group-prepend">
-            <label class="input-group-text" for="gem2">Gem 2</label>
-        </div>
-        <select onchange="calculateStats()" id="gem2" class="custom-select">
+    <div class="custom-select">
+        <label for="gem2">Gem 2</label>
+        <select name="gem2" id="gem2" onchange="calculateStats()">
             <option selected>None/Choose...</option>
             <option value="HP">HP +68%</option>
             <option value="ATK">ATK +68%</option>
@@ -29,11 +25,9 @@
             <option value="REC">REC +68%</option>
         </select>
     </div>
-    <div class="col mb-1 input-group hover">
-        <div class="input-group-prepend">
-            <label class="input-group-text" for="gem3">Gem 3</label>
-        </div>
-        <select onchange="calculateStats()" id="gem3" class="custom-select">
+    <div class="custom-select">
+        <label for="gem3">Gem 3</label>
+        <select name="gem3" id="gem3" onchange="calculateStats()">
             <option selected>None/Choose...</option>
             <option value="HP">HP +68%</option>
             <option value="ATK">ATK +68%</option>
@@ -43,11 +37,11 @@
             <option value="REC">REC +68%</option>
         </select>
     </div>
-    <div class="col mb-1 input-group hover">
-        <div class="input-group-prepend">
-            <label class="input-group-text" for="gemSet">Set</label>
-        </div>
-        <select onchange="calculateStats()" id="gemSet" class="custom-select">
+</section>
+<section>
+    <div class="custom-select">
+        <label for="gemSet">Gem set</label>
+        <select name="gemSet" id="gemSet" onchange="calculateStats()">
             <option selected>None/Broken...</option>
             <option value="HP">Life (HP +20%)</option>
             <option value="ATK">Valor (ATK +20%)</option>
@@ -57,11 +51,9 @@
             <option value="REC">Vitality (REC +25%)</option>
         </select>
     </div>
-    <div class="col mb-1 input-group hover">
-        <div class="input-group-prepend">
-            <label class="input-group-text" for="AggrCS">Aggr/CS</label>
-        </div>
-        <select onchange="calculateStats()" id="AggrCS" class="custom-select">
+    <div class="custom-select">
+        <label for="AggrCS">Special skill</label>
+        <select name="AggrCS" id="AggrCS" onchange="calculateStats()">
             <option value="normal" selected>Normal</option>
             <option value="CS">Corageous Striker</option>
             <option value="US">Unflinching Striker</option>
@@ -69,52 +61,81 @@
             <option value="DEFaggr">DEF Aggr</option>
         </select>
     </div>
-    <!-- Show Stats -->
 
-    <table #tableCalc class="table table-hover table-sm">
-        <thead class="thead-dark">
-            <tr>
-                <th>lv 60 Stats</th>
-                <th>Base</th>
-                <th>With gems</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr style="background:#bf545a">
-                <th>HP (eHP)</th>
-                <td id="baseHP">{{astromon.hp}}</td>
-                <td id="buildHP" class="h6">{{astromon.hp}}</td>
-            </tr>
-            <tr style="background:#4b87ac">
-                <th>ATK (on crit)</th>
-                <td id="baseATK">{{astromon.atk}} </td>
-                <td id="buildATK" class="h6">{{astromon.atk}}</td>
-            </tr>
-            <tr style="background:#e88943">
-                <th>DEF (dmg block)</th>
-                <td id="baseDEF">{{astromon.def}} </td>
-                <td id="buildDEF" class="h6">{{astromon.def}}</td>
-            </tr>
-            <tr style="background:#789b59">
-                <th>REC (heal)</th>
-                <td id="baseREC">{{astromon.rec}} </td>
-                <td id="buildREC" class="h6">{{astromon.rec}}</td>
-            </tr>
-            <tr style="background:#b0b0b0">
-                <th>Crit Dmg</th>
-                <td id="baseCD">{{astromon.cd *100}} %</td>
-                <td id="buildCD" class="h6">{{astromon.cd *100}} %</td>
-            </tr>
-            <tr style="background:#8a58a9">
-                <th>Crit Rate</th>
-                <td id="baseCR">{{astromon.cr *100}} %</td>
-                <td id="buildCR" class="h6">{{astromon.cr *100}} %</td>
-            </tr>
-            <tr style="background:#fbc500">
-                <th>Resist (85% max)</th>
-                <td id="baseRES">{{astromon.rest *100}} %</td>
-                <td id="buildRES" class="h6">{{astromon.rest *100}} %</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+</section>
+
+<!-- Show Stats -->
+<table class="mat-table">
+    <thead class="mat-header-row">
+        <th class="mat-header-cell">lv 60 Stats</th>
+        <th class="mat-header-cell">Base</th>
+        <th class="mat-header-cell">Gems</th>
+        <th class="mat-header-cell">With gems</th>
+    </thead>
+    <tr class="mat-row">
+        <th class="mat-cell">HP</th>
+        <td class="mat-cell" id="baseHP">{{astromon.hp}}</td>
+        <td class="mat-cell" id="gemHP">+ 0</td>
+        <td class="mat-cell" id="buildHP">{{astromon.hp}}</td>
+    </tr>
+    <tr class="mat-row">
+        <th class="mat-cell">eHP</th>
+        <td class="mat-cell" id="baseeHP">0</td>
+        <td class="mat-cell" id="gemeHP">+ 0</td>
+        <td class="mat-cell" id="buildeHP">{{astromon.hp}}</td>
+    </tr>
+    <tr class="mat-row">
+        <th class="mat-cell">ATK</th>
+        <td class="mat-cell" id="baseATK">{{astromon.atk}}</td>
+        <td class="mat-cell" id="gemATK">+ 0</td>
+        <td class="mat-cell" id="buildATK">{{astromon.atk}}</td>
+    </tr>
+    <tr class="mat-row">
+        <th class="mat-cell">DMG on crit</th>
+        <td class="mat-cell" id="basecrATK">0</td>
+        <td class="mat-cell" id="gemcrATK">+ 0</td>
+        <td class="mat-cell" id="buildcrATK">{{astromon.atk}}</td>
+    </tr>
+    <tr class="mat-row">
+        <th class="mat-cell">DEF</th>
+        <td class="mat-cell" id="baseDEF">{{astromon.def}}</td>
+        <td class="mat-cell" id="gemDEF">+ 0</td>
+        <td class="mat-cell" id="buildDEF">{{astromon.def}}</td>
+    </tr>
+    <tr class="mat-row">
+        <th class="mat-cell">dmg block</th>
+        <td class="mat-cell" id="baseDmgB">0 %</td>
+        <td class="mat-cell" id="gemDmgB">+ 0 %</td>
+        <td class="mat-cell" id="buildDmgB">{{astromon.def}}</td>
+    </tr>
+    <tr class="mat-row">
+        <th class="mat-cell">REC</th>
+        <td class="mat-cell" id="baseREC">{{astromon.rec}}</td>
+        <td class="mat-cell" id="gemREC">+ 0</td>
+        <td class="mat-cell" id="buildREC">{{astromon.rec}}</td>
+    </tr>
+    <tr class="mat-row">
+        <th class="mat-cell">Active heal</th>
+        <td class="mat-cell" id="baseHeal">{{astromon.rec * 4.5}}</td>
+        <td class="mat-cell" id="gemHeal">+ 0</td>
+        <td class="mat-cell" id="buildHeal">{{astromon.rec * 4.5}}</td>
+    </tr>
+    <tr class="mat-row">
+        <th class="mat-cell">Crit Dmg</th>
+        <td class="mat-cell" id="baseCD">{{astromon.cd *100}} %</td>
+        <td class="mat-cell" id="gemCD">+ 0 %</td>
+        <td class="mat-cell" id="buildCD">{{astromon.cd *100}} %</td>
+    </tr>
+    <tr class="mat-row">
+        <th class="mat-cell">Crit Rate (150% max)</th>
+        <td class="mat-cell" id="baseCR">{{astromon.cr *100}} %</td>
+        <td class="mat-cell" id="gemCR">+ 0 %</td>
+        <td class="mat-cell" id="buildCR">{{astromon.cr *100}} %</td>
+    </tr>
+    <tr class="mat-row">
+        <th class="mat-cell">Resist (85% max)</th>
+        <td class="mat-cell" id="baseRES">{{astromon.rest *100}} %</td>
+        <td class="mat-cell" id="gemRES">+ 0 %</td>
+        <td class="mat-cell" id="buildRES">{{astromon.rest *100}} %</td>
+    </tr>
+</table>
