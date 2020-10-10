@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {MatAccordion} from '@angular/material/expansion';
 
 @Component({
   selector: 'app-titan',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./titan.component.scss']
 })
 export class TitanComponent implements OnInit {
-
+  @ViewChild(MatAccordion) accordion: MatAccordion;
   constructor() { }
 
   ngOnInit(): void {

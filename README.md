@@ -1,4 +1,8 @@
-IMPORTANT Clear coockies and cache to use this new version.
+# IMPORTANT
+Old version deleted 
+-- https://addictivoh.github.io/MSL-Data-Nest/ --
+
+Clear cookies and cache to use this new version.
 https://addictivoh.github.io/
 
 # Monster Super League Data Nest

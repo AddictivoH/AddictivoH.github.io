@@ -4,17 +4,17 @@
     color: var(--msl-d0);
     width: auto;
   }
-  
+
 .mat-row,  .mat-header-row {
     display: flex;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
+    /*border-bottom-width: 1px;
+    border-bottom-style: solid;*/
     align-items: center;
     min-height: 36px;
     padding: 0 24px;
     color: var(--msl-d0);
   }
-  
+
 .mat-cell,  .mat-header-cell {
     flex: 1;
     overflow: hidden;
@@ -24,9 +24,22 @@
 
 .mat-header-cell {
     color: var(--msl-d0);
-    font-size: 16px;    
+    font-size: 16px;
     font-weight: bold;
 }
+
+td.mat-cell {
+  padding: 0;
+  border-bottom-width: 0.15rem;
+  border-bottom-style: solid;
+}
+.hp-cell {  border-bottom-color: lightcoral;}
+.atk-cell {  border-bottom-color: lightskyblue;}
+.def-cell {  border-bottom-color: lightsalmon;}
+.cd-cell {  border-bottom-color: lightgray;}
+.cr-cell {  border-bottom-color: purple;}
+.rec-cell {  border-bottom-color: lightgreen;}
+.rest-cell {  border-bottom-color: lightyellow;}
 
 
 /* Reset Select */
@@ -38,7 +51,7 @@ select {
     outline: 0;
     box-shadow: none;
     border: 0 !important;
-    background: var(--bg); //bg 
+    background: var(--bg); //bg
     background-image: none;
     flex: 1;
     padding: 0 .5rem;

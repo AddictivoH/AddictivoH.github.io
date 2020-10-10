@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1601712877926,
+  "timestamp": 1602297656220,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,12 +13,12 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.fec417ee5a47685af9eb.js",
+        "/main.7d710565ec8623dee38f.js",
         "/manifest.webmanifest",
         "/polyfills.a4021de53358bb0fec14.js",
         "/runtime.e227d1a0e31cbccbf8ec.js",
-        "/scripts.33be4c387838aee31a3c.js",
-        "/styles.6b596e87662d9a1573f3.css"
+        "/scripts.5d317ba4841844e511e9.js",
+        "/styles.a76c5f37c93dc773f2f9.css"
       ],
       "patterns": [
         "https:\\/\\/fonts\\.googleapis\\.com\\/css\\?family=Roboto:300,400,500&amp",
@@ -34,8 +34,6 @@
       },
       "urls": [
         "/assets/css/bootstrap-4.4.1.min.css",
-        "/assets/css/bootstrap-table-1.15.5.min.css",
-        "/assets/css/bootstrap-table-filter-control-1.15.5.css",
         "/assets/icons/favicon.ico",
         "/assets/icons/icon-128x128.png",
         "/assets/icons/icon-144x144.png",
@@ -4592,14 +4590,8 @@
         "/assets/img/titan/boss_titan_r.png",
         "/assets/img/titan/boss_titan_w.png",
         "/assets/js/ThemeSwitch.js",
-        "/assets/js/bootstrap-table-1.15.5.min.js",
-        "/assets/js/bootstrap-table-filter-control-1.15.5.js",
-        "/assets/js/bootstrap-table-natural-sorting-1.15.5.js",
-        "/assets/js/bootstrap.bundle-4.4.1.min.js",
         "/assets/js/dmg-calculator.js",
         "/assets/js/gem-calculator.js",
-        "/assets/js/jquery-3.4.1.min.js",
-        "/assets/js/workbox.js",
         "/favicon.png"
       ],
       "patterns": []
@@ -4621,8 +4613,6 @@
   ],
   "hashTable": {
     "/assets/css/bootstrap-4.4.1.min.css": "fc8d66686264aa145f0d97fa0fe0d524d36890f6",
-    "/assets/css/bootstrap-table-1.15.5.min.css": "bd49e510bce9d3c1c4b1e18f50c095490e5bf37f",
-    "/assets/css/bootstrap-table-filter-control-1.15.5.css": "84f24368785cc62ef9db68a1482e4d2d8a70fdd8",
     "/assets/icons/favicon.ico": "85457da99cfca9fe2061b4eb670b9efbdb71a42d",
     "/assets/icons/icon-128x128.png": "f6811adada505922c09d4fe3aa614fd0dfbe2608",
     "/assets/icons/icon-144x144.png": "c298ba2966c41260e1a16820059b552f1ee099ab",
@@ -9179,23 +9169,17 @@
     "/assets/img/titan/boss_titan_r.png": "195d21c3c3a53f59fe1e3d64f5f79ce005c1d0b3",
     "/assets/img/titan/boss_titan_w.png": "42813d64c5186754868540d16b47b35a94a3690c",
     "/assets/js/ThemeSwitch.js": "c0c802f46154552c9354a768e2a24726899281d2",
-    "/assets/js/bootstrap-table-1.15.5.min.js": "0d18913ddb004f1e34acad441e1a0da37f559b4d",
-    "/assets/js/bootstrap-table-filter-control-1.15.5.js": "07d7c5a2ef0416043412cdd257fc28300b167b9e",
-    "/assets/js/bootstrap-table-natural-sorting-1.15.5.js": "3668869f1e8e57459ea7077079a4f22abc467795",
-    "/assets/js/bootstrap.bundle-4.4.1.min.js": "fac45259046dd90b16d251739108002d67a00b54",
-    "/assets/js/dmg-calculator.js": "d9202b16bea047877c87891b08b31e94ce7ab88f",
+    "/assets/js/dmg-calculator.js": "657f32a4a9bd1b87e732f5d8b870cd6221fde35b",
     "/assets/js/gem-calculator.js": "b598114d597bb7a18f67d5ea7f3fe5e6f425865c",
-    "/assets/js/jquery-3.4.1.min.js": "88523924351bac0b5d560fe0c5781e2556e7693d",
-    "/assets/js/workbox.js": "09204cc610803980d23e87560bdd929f1f164b39",
     "/favicon.ico": "85457da99cfca9fe2061b4eb670b9efbdb71a42d",
     "/favicon.png": "e8b22794a57b8b956314fbf05650f3191765d730",
-    "/index.html": "55fe5b415a40eb97f0909b5e817f7c988661fdbe",
-    "/main.fec417ee5a47685af9eb.js": "2095acafb1deb71360d4cac52f266831a2f999a9",
+    "/index.html": "c0da379efd2eb444619422804a399afc4f7a78c5",
+    "/main.7d710565ec8623dee38f.js": "cfd9d91bb97b86fdf44ff62d8fb03d5d8ec1ab90",
     "/manifest.webmanifest": "c91d82c9e57f8a394bf5cab5645bf71dc237167f",
     "/polyfills.a4021de53358bb0fec14.js": "b47435a9ef2a4829f2f9dfd35599bde3614981b1",
     "/runtime.e227d1a0e31cbccbf8ec.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/scripts.33be4c387838aee31a3c.js": "1a9a86fc084d8b0821458a2b33314cdf0060ad41",
-    "/styles.6b596e87662d9a1573f3.css": "39d97851d99120c6e493094e270b4cd46b0b6638"
+    "/scripts.5d317ba4841844e511e9.js": "1d5513f7f252b0de9b24547b88517260844f263d",
+    "/styles.a76c5f37c93dc773f2f9.css": "20cd6e4f227317c1a561bb4d34fbf50d8ae10e34"
   },
   "navigationUrls": [
     {

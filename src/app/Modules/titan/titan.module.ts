@@ -7,6 +7,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatSelectModule} from '@angular/material/select';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 import { TitanRoutingModule } from './titan-routing.module';
 import { TitanComponent } from './titan.component';
@@ -27,6 +28,7 @@ import { TenebrosoComponent } from './tenebroso/tenebroso.component';
     MatSelectModule,
     MatInputModule,
     MatChipsModule,
+    MatExpansionModule,
     TitanRoutingModule
   ]
 })

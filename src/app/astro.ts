@@ -19,7 +19,7 @@ export class Astro {
   lskilln: string;  lskilld: string;  lskillp: string;
   nskilln: string;  nskilld: string;  nskillc: string;
   nskillb1: string;  nskillb2: string;  nskillb3: string;  nskillb4: string;
-  askilln: string;  askilld: string;  askillc: string;  askillt: string;
+  askilln: string;  askilld: string;  askillc: string;  askillt: string;  askillh: string;
   askillb1: string;  askillb2: string;  askillb3: string;  askillb4: string;
-  tierPvE: string;  tierDra: string;  tierPvPO: string;  tierPvPD: string;  tierTitan: string;
+  tierPvE: string;  tierPvPO: string;  tierPvPD: string;  tierTitan: string;
 }

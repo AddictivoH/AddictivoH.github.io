@@ -1,238 +1,255 @@
 <div class="astro-detail">
 
-    <header>
-        <div class="mslcard cabeza">
-            <div class="card-title">
-                <h1>{{astro.element}} {{astro.name1}} {{astro.nat}}* {{astro.battletype}}</h1>
-            </div>
-
-            <div class="card-stats">
-
-                <div class="badge badge-pill d-inline-flex align-items-center hover hp">
-                    HP: {{astro.hp}} (#{{astro.rkhp}})
-                </div>
-                <div class="badge badge-pill d-inline-flex align-items-center hover atk">
-                    ATK: {{astro.atk}} (#{{astro.rkatk}})
-                </div>
-                <div class="badge badge-pill d-inline-flex align-items-center hover def">
-                    DEF: {{astro.def}} (#{{astro.rkdef}})
-                </div>
-                <div class="badge badge-pill d-inline-flex align-items-center hover rec">
-                    REC: {{astro.rec}} (#{{astro.rkrec}})
-                </div>
-                <div class="badge badge-pill d-inline-flex align-items-center hover cd">
-                    CD: {{astro.cd*100}}%
-                </div>
-                <div class="badge badge-pill d-inline-flex align-items-center hover cr">
-                    CR: {{astro.cr*100}}%
-                </div>
-                <div class="badge badge-pill d-inline-flex align-items-center hover res">
-                    RES: {{astro.rest*100}}%
-                </div>
-            </div>
-
-            <div class="card-tier">
-                <div class="tier mslcard-focus">
-                    <div class="value">{{astro.tierPvE}}</div>
-                    <div class="type">Farm</div>
-                </div>
-                <div class="tier mslcard-focus">
-                    <div class="value">{{astro.tierPvPO}}</div>
-                    <div class="type">PvPO</div>
-                </div>
-                <div class="tier mslcard-focus">
-                    <div class="value">{{astro.tierPvPD}}</div>
-                    <div class="type">PvPD</div>
-                </div>
-                <div class="tier mslcard-focus">
-                    <div class="value">{{astro.tierTitan}}</div>
-                    <div class="type">Titan</div>
-                </div>
-            </div>
+  <header>
+    <div class="mslcard cabeza">
+      <div class="mslcard-title card-title">
+        <img src="assets/img/element/{{astro.element}}.png" alt="{{astro.element}}" width="40" class="responsive mslcard-title-icon">
+        <div class="mslcard-title-text">
+          <h2> {{astro.name1}} <span class="badge atk badge-pill">{{astro.rarity}}</span></h2>
+          <b>{{astro.nat}}* {{astro.battletype}}</b>
         </div>
-    </header>
+      </div>
 
-    <aside>
-        <div class="mslcard card-icons">
-                <div id="img1">
-                    <div class="d-flex">
-                        <img src="assets/img/astro/{{astro.name1}}/{{astro.id}}1.png" alt="{{astro.id}}1">
-                        <img src="assets/img/astro/{{astro.name1}}/{{astro.id}}1v.png" alt="{{astro.id}}1v">
-                    </div>
-                    <div>
-                        <h2 id="img1n">{{astro.name1}}</h2>
-                    </div>
-                </div>
-                <div id="img2">
-                    <div class="d-flex">
-                        <img src="assets/img/astro/{{astro.name1}}/{{astro.id}}2.png" alt="{{astro.id}}2">
-                        <img src="assets/img/astro/{{astro.name1}}/{{astro.id}}2v.png" alt="{{astro.id}}2v">
-                    </div>
-                    <div>
-                        <h2 id="img2n">{{astro.name2}}</h2>
-                    </div>
-                </div>
-                <div id="img3">
-                    <div class="d-flex">
-                        <img src="assets/img/astro/{{astro.name1}}/{{astro.id}}3.png" alt="{{astro.id}}3">
-                        <img src="assets/img/astro/{{astro.name1}}/{{astro.id}}3v.png" alt="{{astro.id}}3v">
-                    </div>
-                    <div>
-                        <h2 id="img3n">{{astro.name3}}</h2>
-                    </div>
-                </div>
-                <div id="superc">
-                    <div class="d-flex">
-                        <img src="assets/img/astro/{{astro.name1}}/{{astro.id}}4.png" alt="{{astro.id}}4">
-                        <img src="assets/img/astro/{{astro.name1}}/{{astro.id}}4v.png" alt="{{astro.id}}4v">
-                    </div>
-                    <div>
-                        <h2 id="supercn">{{astro.name4}}</h2>
-                    </div>
-                </div>
-                <div id="superg">
-                    <div class="d-flex">
-                        <img src="assets/img/astro/{{astro.name1}}/{{astro.id}}5.png" alt="{{astro.id}}5">
-                        <img src="assets/img/astro/{{astro.name1}}/{{astro.id}}5v.png" alt="{{astro.id}}5v">
-                    </div>
-                    <div>
-                        <h2 id="supergn">{{astro.name5}}</h2>
-                    </div>
-                </div>
-            
+      <div class="mslcard-content card-stats">
+        <div class="badge badge-pill d-inline-flex align-items-center hover hp">
+          HP: {{astro.hp}} (#{{astro.rkhp}})
         </div>
-        <!----------------L S--------------->
-        <div class="mslcard card-ls">
-            <div class="d-inline mt-1">
-                <img src="assets/img/skill/leader/{{astro.lskilln}}.png" class="ml-2 mr-2 mt-1 d-inline"
-                    alt="{{astro.lskilln}}" width="48">
-                <h3 class="d-inline">{{astro.lskilln}} <span
-                        class="badge badge-primary badge-pill">{{astro.lskillp}}</span>
-                </h3>
-            </div>
-            <div class="mslcard-focus skill">
-                <b>{{astro.lskilld}}</b>
-            </div>
+        <div class="badge badge-pill d-inline-flex align-items-center hover atk">
+          ATK: {{astro.atk}} (#{{astro.rkatk}})
         </div>
-        <!----------------N S--------------->
-        <div class="mslcard card-ns">
-            <div class="d-inline mt-1">
-                <img src="assets/img/skill/{{astro.nskilln}}.png" class="ml-2 mr-2 mt-1 d-inline"
-                    alt="{{astro.nskilln}}" width="48">
-                <h3 class="d-inline">{{astro.nskilln}} <span
-                        class="badge badge-danger badge-pill">{{astro.nskillc}}</span>
-                </h3>
-            </div>
-            <div class="mslcard-focus skill">
-                <b>{{astro.nskilld}}</b>
-                <b>{{astro.nskillb1}}</b>
-                <b>{{astro.nskillb2}}</b>
-                <b>{{astro.nskillb3}}</b>
-                <b>{{astro.nskillb4}}</b>
-            </div>
+        <div class="badge badge-pill d-inline-flex align-items-center hover def">
+          DEF: {{astro.def}} (#{{astro.rkdef}})
         </div>
-        <!----------------A S--------------->
-        <div class="mslcard card-as">
-            <div class="d-inline mt-1">
-                <img src="assets/img/skill/{{astro.askilln}}.png" class="ml-2 mr-2 mt-1 d-inline"
-                    alt="{{astro.askilln}}" width="48">
-                <h3 class="d-inline">{{astro.askilln}} <span
-                        class="badge badge-danger badge-pill">{{astro.askillc}}</span>
-                    <span class="badge badge-primary badge-pill">{{astro.askillt}}</span></h3>
-            </div>
-            <div class="mslcard-focus skill">
-                <b>{{astro.askilld}}</b>
-                <b>{{astro.askillb1}}</b>
-                <b>{{astro.askillb2}}</b>
-                <b>{{astro.askillb3}}</b>
-                <b>{{astro.askillb4}}</b>
-            </div>
+        <div class="badge badge-pill d-inline-flex align-items-center hover rec">
+          REC: {{astro.rec}} (#{{astro.rkrec}})
         </div>
-    </aside>
-
-    <section class="contenido">
-        <div class="mslcard">
-            <app-dmg [astro]="astro"></app-dmg>
-            <mat-tab-group mat-align-tabs="center">
-
-                <mat-tab label="Basic Flow Chart">
-                    <img src="https://i.redd.it/fcugjnuje9oy.png" alt="Basic Flow Chart" class="responsive">
-                </mat-tab>
-
-                <mat-tab label="Attacker">
-
-                    <h2>Nuker</h2>
-                    <p>Ruin set provided you can get high enough Crit Rate (>80%) has the highest DMG
-                        capacity
-                        but is only a minor improvement over other DMG set. Don´t be afraid to use Valor or
-                        Intuition sets as the difference in DMG will often go unnoticed. </p>
-                    <h3>Dark:</h3>
-                    <p>(Ruin) Atk/CR/Hp-Def or Atk/Atk/CR</p>
-                    <h3>Other Element:</h3>
-                    <p>Atk/Atk/CR or Atk/Hp/Def or ATK/CR/Hp-Def</p>
-                    <h2>Balanced:</h2>
-                    <p>Fire Power: Atk/Atk/HP (valor/protection)</p>
-                    <p>Warrior: Atk/Def/HP (valor)</p>
-                    <h2>Courageous Strike</h2>
-                    <p>As a caution these Astromons are aimed at late game players as their use is almost
-                        Titan
-                        exclusive. Damage wise they can be gemmedthe same as normal nukes but due to the
-                        fact
-                        that
-                        they can still dish out alot of DMG without offensive gems some players opt for more
-                        defensive setup.</p>
-                    <p>Atk/Atk/CR-Hp or ATK/CR/Hp-Def or Cr/Hp/Def</p>
-
-                </mat-tab>
-
-                <mat-tab label="Debuffer">
-
-                    <h2>Debuffer / Utility / Tank / Defender</h2>
-                    <p>Astromons that alter the enemy's status (Atk/Def/Rec down, silence, stun, seal,
-                        shock,
-                        weaken).</p>
-                    <p>Hp/Hp/Def or Def/Def/Hp</p>
-                    <p>Does its ability require Crit?: Hp/Hp/CR or Hp/Def/CR</p>
-
-                </mat-tab>
-
-                <mat-tab label="Healer">
-
-                    <h2>Healer</h2>
-                    <p>Don't forget Resist is the most important substat for healer without resist they will
-                        be
-                        vulnerable to disabler status like silence or seal, wich can stop them from doing
-                        its
-                        job.
-                        Aim for as much Resist and Recovery as you can through substats (85% is the maximum
-                        resistance that an astromon can have).</p>
-                    <h3>Passive Heal (3*)</h3>
-                    <p>(Life) Hp/Hp/Hp or Hp/Hp/Def</p>
-                    <h3>Active Heal (5*)</h3>
-                    <p>(Vitality) Hp/Hp/Hp or Hp/Hp/Def or Hp/Def/Def</p>
-                    <h3>Shield (5*)</h3>
-                    <p>HP based: (Life) Hp/Hp/Hp or Hp/Hp/Def</p>
-                    <p>Other shield: Hp/Hp/Def or Hp/Def/Def</p>
-
-                </mat-tab>
-
-                <mat-tab label="Aggresor">
-
-                    <h2>Aggresor</h2>
-                    <p>Deals DMG based off HP, DEF or REC. Aim for as much Resist and Crit Rate as you can
-                        through substats</p>
-                    <p>Early: Broken set. Mid: Conviction set. Late: Ruin?</p>
-                    <h3>HP Aggr</h3>
-                    <p>(Life) Hp/Hp/Hp</p>
-                    <h3>DEF Aggr</h3>
-                    <p>(Life/Protection) Def/Def/Def</p>
-                    <h3>REC Aggr</h3>
-                    <p>(Life) Hp/Def/Rec or Hp/Rec/Rec</p>
-
-                </mat-tab>
-
-            </mat-tab-group>
+        <div class="badge badge-pill d-inline-flex align-items-center hover cd">
+          CD: {{astro.cd*100}}%
         </div>
-    </section>
+        <div class="badge badge-pill d-inline-flex align-items-center hover cr">
+          CR: {{astro.cr*100}}%
+        </div>
+        <div class="badge badge-pill d-inline-flex align-items-center hover res">
+          RES: {{astro.rest*100}}%
+        </div>
+      </div>
+
+      <div class="mslcard-footer card-tier">
+        <div class="tier mslcard-focus">
+          <div class="value">{{astro.tierPvE}}</div>
+          <div class="type">Farm</div>
+        </div>
+        <div class="tier mslcard-focus">
+          <div class="value">{{astro.tierPvPO}}</div>
+          <div class="type">PvPO</div>
+        </div>
+        <div class="tier mslcard-focus">
+          <div class="value">{{astro.tierPvPD}}</div>
+          <div class="type">PvPD</div>
+        </div>
+        <div class="tier mslcard-focus">
+          <div class="value">{{astro.tierTitan}}</div>
+          <div class="type">Titan</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <aside>
+    <div class="mslcard card-icons">
+      <div id="img1">
+        <div class="d-flex">
+          <img src="assets/img/astro/{{astro.name1}}/{{astro.id}}1.png" alt="{{astro.id}}1">
+          <img src="assets/img/astro/{{astro.name1}}/{{astro.id}}1v.png" alt="{{astro.id}}1v">
+        </div>
+        <div>
+          <h2 id="img1n">{{astro.name1}}</h2>
+        </div>
+      </div>
+      <div id="img2">
+        <div class="d-flex">
+          <img src="assets/img/astro/{{astro.name1}}/{{astro.id}}2.png" alt="{{astro.id}}2">
+          <img src="assets/img/astro/{{astro.name1}}/{{astro.id}}2v.png" alt="{{astro.id}}2v">
+        </div>
+        <div>
+          <h2 id="img2n">{{astro.name2}}</h2>
+        </div>
+      </div>
+      <div id="img3">
+        <div class="d-flex">
+          <img src="assets/img/astro/{{astro.name1}}/{{astro.id}}3.png" alt="{{astro.id}}3">
+          <img src="assets/img/astro/{{astro.name1}}/{{astro.id}}3v.png" alt="{{astro.id}}3v">
+        </div>
+        <div>
+          <h2 id="img3n">{{astro.name3}}</h2>
+        </div>
+      </div>
+      <div id="superc">
+        <div class="d-flex">
+          <img src="assets/img/astro/{{astro.name1}}/{{astro.id}}4.png" alt="{{astro.id}}4">
+          <img src="assets/img/astro/{{astro.name1}}/{{astro.id}}4v.png" alt="{{astro.id}}4v">
+        </div>
+        <div>
+          <h2 id="supercn">{{astro.name4}}</h2>
+        </div>
+      </div>
+      <div id="superg">
+        <div class="d-flex">
+          <img src="assets/img/astro/{{astro.name1}}/{{astro.id}}5.png" alt="{{astro.id}}5">
+          <img src="assets/img/astro/{{astro.name1}}/{{astro.id}}5v.png" alt="{{astro.id}}5v">
+        </div>
+        <div>
+          <h2 id="supergn">{{astro.name5}}</h2>
+        </div>
+      </div>
+
+    </div>
+    <!----------------L S--------------->
+    <div class="mslcard card-ls">
+      <div class="mslcard-title">
+        <img src="assets/img/skill/leader/{{astro.lskilln}}.png" alt="{{astro.lskilln}}" width="48"
+          class="responsive mslcard-title-icon">
+        <div class="mslcard-title-text">
+          <h2> {{astro.lskilln}}</h2>
+          <b><span class="badge atk badge-pill">{{astro.lskillp}}</span></b>
+        </div>
+      </div>
+      <div class="mslcard-content">
+        <div class="mslcard-focus skill">
+          <b>{{astro.lskilld}}</b>
+        </div>
+      </div>
+    </div>
+    <!----------------N S--------------->
+    <div class="mslcard card-ns">
+      <div class="mslcard-title">
+        <img src="assets/img/skill/{{astro.nskilln}}.png" alt="{{astro.nskilln}}" width="48"
+          class="responsive mslcard-title-icon">
+        <div class="mslcard-title-text">
+          <h2> {{astro.nskilln}}</h2>
+          <b><span class="badge hp badge-pill">{{astro.nskillc}}</span></b>
+        </div>
+      </div>
+      <div class="mslcard-content">
+        <div class="mslcard-focus skill">
+          <b>{{astro.nskilld}}</b>
+          <b>{{astro.nskillb1}}</b>
+          <b>{{astro.nskillb2}}</b>
+          <b>{{astro.nskillb3}}</b>
+          <b>{{astro.nskillb4}}</b>
+        </div>
+      </div>
+    </div>
+    <!----------------A S--------------->
+    <div class="mslcard card-as">
+      <div class="mslcard-title">
+        <img src="assets/img/skill/{{astro.askilln}}.png" alt="{{astro.askilln}}" width="48"
+          class="responsive mslcard-title-icon">
+        <div class="mslcard-title-text">
+          <h2> {{astro.askilln}}</h2>
+          <b>
+            <span class="badge hp badge-pill">{{astro.askillc}}</span>
+            <span class="badge rec badge-pill">{{astro.askillh}}</span>
+            <span class="badge atk badge-pill">{{astro.askillt}}</span>
+          </b>
+        </div>
+      </div>
+      <div class="mslcard-content">
+        <div class="mslcard-focus skill">
+          <b>{{astro.askilld}}</b>
+          <b>{{astro.askillb1}}</b>
+          <b>{{astro.askillb2}}</b>
+          <b>{{astro.askillb3}}</b>
+          <b>{{astro.askillb4}}</b>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <section class="contenido">
+
+    <div class="mslcard">
+      <app-dmg [astro]="astro"></app-dmg>
+      <mat-tab-group mat-align-tabs="center">
+
+        <mat-tab label="Basic Flow Chart">
+          <img src="https://i.redd.it/fcugjnuje9oy.png" alt="Basic Flow Chart" class="responsive">
+        </mat-tab>
+
+        <mat-tab label="Attacker">
+
+          <h2>Nuker</h2>
+          <p>Ruin set provided you can get high enough Crit Rate (>80%) has the highest DMG
+            capacity
+            but is only a minor improvement over other DMG set. Don´t be afraid to use Valor or
+            Intuition sets as the difference in DMG will often go unnoticed. </p>
+          <h3>Dark:</h3>
+          <p>(Ruin) Atk/CR/Hp-Def or Atk/Atk/CR</p>
+          <h3>Other Element:</h3>
+          <p>Atk/Atk/CR or Atk/Hp/Def or ATK/CR/Hp-Def</p>
+          <h2>Balanced:</h2>
+          <p>Fire Power: Atk/Atk/HP (valor/protection)</p>
+          <p>Warrior: Atk/Def/HP (valor)</p>
+          <h2>Courageous Strike</h2>
+          <p>As a caution these Astromons are aimed at late game players as their use is almost
+            Titan
+            exclusive. Damage wise they can be gemmedthe same as normal nukes but due to the
+            fact
+            that
+            they can still dish out alot of DMG without offensive gems some players opt for more
+            defensive setup.</p>
+          <p>Atk/Atk/CR-Hp or ATK/CR/Hp-Def or Cr/Hp/Def</p>
+
+        </mat-tab>
+
+        <mat-tab label="Debuffer">
+
+          <h2>Debuffer / Utility / Tank / Defender</h2>
+          <p>Astromons that alter the enemy's status (Atk/Def/Rec down, silence, stun, seal,
+            shock,
+            weaken).</p>
+          <p>Hp/Hp/Def or Def/Def/Hp</p>
+          <p>Does its ability require Crit?: Hp/Hp/CR or Hp/Def/CR</p>
+
+        </mat-tab>
+
+        <mat-tab label="Healer">
+
+          <h2>Healer</h2>
+          <p>Don't forget Resist is the most important substat for healer without resist they will
+            be
+            vulnerable to disabler status like silence or seal, wich can stop them from doing
+            its
+            job.
+            Aim for as much Resist and Recovery as you can through substats (85% is the maximum
+            resistance that an astromon can have).</p>
+          <h3>Passive Heal (3*)</h3>
+          <p>(Life) Hp/Hp/Hp or Hp/Hp/Def</p>
+          <h3>Active Heal (5*)</h3>
+          <p>(Vitality) Hp/Hp/Hp or Hp/Hp/Def or Hp/Def/Def</p>
+          <h3>Shield (5*)</h3>
+          <p>HP based: (Life) Hp/Hp/Hp or Hp/Hp/Def</p>
+          <p>Other shield: Hp/Hp/Def or Hp/Def/Def</p>
+
+        </mat-tab>
+
+        <mat-tab label="Aggresor">
+
+          <h2>Aggresor</h2>
+          <p>Deals DMG based off HP, DEF or REC. Aim for as much Resist and Crit Rate as you can
+            through substats</p>
+          <p>Early: Broken set. Mid: Conviction set. Late: Ruin?</p>
+          <h3>HP Aggr</h3>
+          <p>(Life) Hp/Hp/Hp</p>
+          <h3>DEF Aggr</h3>
+          <p>(Life/Protection) Def/Def/Def</p>
+          <h3>REC Aggr</h3>
+          <p>(Life) Hp/Def/Rec or Hp/Rec/Rec</p>
+
+        </mat-tab>
+
+      </mat-tab-group>
+    </div>
+  </section>
 
 </div>

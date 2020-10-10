@@ -69,7 +69,7 @@ function calculateStats() {
 	} else if (AggrCS === 'normal') {	FinalATK = Math.round(parseInt(baseATK) + parseInt(calcATK1) + parseInt(calcATK2) + parseInt(calcATK3) + parseInt(calcATK4))
 	} ;
 
-	
+
 	// Display data
 	document.getElementById('buildHP').innerText = FinalHP;
 	document.getElementById('gemHP').innerText = '+ ' + gemHP;
@@ -79,13 +79,13 @@ function calculateStats() {
 
 	document.getElementById('buildATK').innerText = FinalATK;
 	document.getElementById('gemATK').innerText = '+ ' + (FinalATK - baseATK);
-	
+
 	document.getElementById('buildcrATK').innerText = Math.round(FinalATK + (FinalATK * (FinalCD / 100)));
 	document.getElementById('gemcrATK').innerText = '+ ' + (Math.round(FinalATK + (FinalATK * (FinalCD / 100))) - basecrATK);
 
 	document.getElementById('buildDEF').innerText = FinalDEF;
 	document.getElementById('gemDEF').innerText = '+ ' + gemDEF;
-	
+
 	document.getElementById('buildDmgB').innerText = Math.round((FinalDEF / (FinalDEF + 1200)) * 100) + ' %';
 	document.getElementById('gemDmgB').innerText = '+ ' + ( (Math.round((FinalDEF / (FinalDEF + 1200)) * 100)) - parseInt(baseDmgB) ) + ' %';
 
@@ -103,7 +103,7 @@ function calculateStats() {
 
   }
 
-  window.addEventListener('load', 
+  /*window.addEventListener('load',
   function() {
 	let superc = document.getElementById('supercn').innerText; console.log(superc + 'algo');
     let superg = document.getElementById('supergn').innerText;
@@ -111,4 +111,4 @@ function calculateStats() {
     else {document.getElementById('superc').style.display = 'block';};
     if (superg !== 'undefined') {	document.getElementById('superg').style.display = 'none'; }
     else{document.getElementById('superg').style.display = 'block';};
-}, false); 
+}, false); */
