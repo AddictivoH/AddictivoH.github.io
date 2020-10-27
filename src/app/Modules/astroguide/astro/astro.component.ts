@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import {  ActivatedRoute} from '@angular/router';
 import {  Astro} from '../../../astro';
 import {  AstroService} from '../../../astro.service';
@@ -8,9 +8,10 @@ import {  AstroService} from '../../../astro.service';
   templateUrl: './astro.component.html',
   styleUrls: ['./astro.component.scss']
 })
-export class AstroComponent implements OnInit {
+export class AstroComponent implements OnInit, AfterViewInit {
   public isCollapsed = false;
   astro: Astro;
+
   constructor(
     private route: ActivatedRoute,
     private astroService: AstroService,
@@ -23,5 +24,8 @@ export class AstroComponent implements OnInit {
   getAstroID(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.astroService.getAstroID(id).subscribe(astro => this.astro = astro);
+  }
+
+  ngAfterViewInit(): void {
   }
 }

@@ -1,10 +1,11 @@
-<div class="astro-detail">
+<article class="astro-detail">
 
   <header>
     <div class="mslcard cabeza">
       <div class="mslcard-title card-title">
-        <img src="assets/img/element/{{astro.element}}.png" alt="{{astro.element}}" width="40" class="responsive mslcard-title-icon">
+        <img src="assets/img/element/{{astro.element}}.png" alt="{{astro.element}}" width="40" class="responsive mslcard-title-icon" id="elementicon">
         <div class="mslcard-title-text">
+          <b id="elementcolor" style="display: none;">{{astro.element}}</b>
           <h2> {{astro.name1}} <span class="badge atk badge-pill">{{astro.rarity}}</span></h2>
           <b>{{astro.nat}}* {{astro.battletype}}</b>
         </div>
@@ -252,4 +253,4 @@
     </div>
   </section>
 
-</div>
+</article>

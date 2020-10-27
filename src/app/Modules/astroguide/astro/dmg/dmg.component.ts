@@ -27,6 +27,8 @@ export class DmgComponent implements OnInit, AfterViewInit{
     this.superg = document.getElementById('supergn').innerText;
     console.log(this.superc); document.getElementById('superc').style.display = 'block';
     console.log(this.superg + ': supergggg'); document.getElementById('superg').style.display = 'block';
+
+    
   }
 
   ngAfterViewInit(): void {
