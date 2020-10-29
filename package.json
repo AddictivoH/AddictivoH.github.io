@@ -1,6 +1,6 @@
 {
   "name": "msl-data-nest",
-  "version": "20.10.03",
+  "version": "20.10.29",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
